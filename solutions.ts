@@ -19,3 +19,11 @@ function filterByRating(
 
   return result;
 }
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  let result: T[] = [];
+  for (const arr of arrays) {
+    result = [...result, ...arr];
+  }
+  return result;
+}
